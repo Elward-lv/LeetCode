@@ -9,6 +9,7 @@ import java.util.Stack;
  * (15 + 7 ) / 2  = 22 / 2 = 11
  * 这里可见不是栈的问题，估计是数据传输之中double精度的问题;
  * 那为什么使用queue的时候代码类似却没有出现类似的问题呢？
+ * 破案了：计算的节点不对的问题，不是精度问题
  * @see leetcode.editor.cn.AverageOfLevelsInBinaryTree
  * @Author: lvyanwei
  * @Date: 2021-11-18
