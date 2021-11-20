@@ -41,7 +41,7 @@ public class AverageOfLevelsInBinaryTree {
         /**
          * 1.我的思想：层序遍历
          *          可以使用其他数据结构来帮助解题目,虽然实现了层序遍历但是如何能获取每一层的开始和结束呢？
-         *          因为你过来掉了null值，所以不能使用节点的数量来计算平均值
+         *          因为你过来掉了null值，所以不能使用节点的数量来计算平均值,不计算null值，null不计入平均值
          * 2.CSNOTE：
          * @param root
          * @return
@@ -52,6 +52,8 @@ public class AverageOfLevelsInBinaryTree {
             //破案了：原来是在先把左子树填入栈，后把右子树填入栈了，导致求平均数的数字都用错了
             ArrayList<Double> res = new ArrayList<>();
             Stack<TreeNode> stack = new Stack<>();
+            //层数,层数也知道了，该如何判断是最后一层呢? 这样每次拷贝上次的栈输出即可
+            int times = 0;
             if(root == null){
                 return res;
             }
@@ -62,13 +64,14 @@ public class AverageOfLevelsInBinaryTree {
                 for (int i = 0; i < cnt; i++) {
                     TreeNode peek = stack.pop();
                     sum += peek.val;
-                    System.out.println(peek.val);
                     if(peek.right != null) stack.push(peek.right);
                     if(peek.left != null) stack.push(peek.left);
                 }
                 System.out.println("sum:"+sum+", cnt:"+cnt+",res:" + sum/cnt);
+                System.out.println("times : "+times);
                 System.out.println("=================");
                 res.add(sum  / cnt);
+                times ++;
             }
             return res;
             //2
