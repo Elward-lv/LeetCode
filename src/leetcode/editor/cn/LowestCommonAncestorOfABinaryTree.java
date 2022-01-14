@@ -44,6 +44,8 @@ package leetcode.editor.cn;
 // 👍 1393 👎 0
 
 
+import java.util.HashMap;
+
 public class LowestCommonAncestorOfABinaryTree {
     public static void main(String[] args) {
         Solution solution = new LowestCommonAncestorOfABinaryTree()
