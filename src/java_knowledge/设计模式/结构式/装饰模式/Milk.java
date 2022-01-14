@@ -9,4 +9,13 @@ public class Milk extends CondimentDecorator {
     public double cost() {
         return beverage.cost() + 1;
     }
+
+    /**
+     * 调料不仅仅包括饮料的描述还包括调料的描述
+     * @return
+     */
+    @Override
+    public String getDisp() {
+        return this.beverage.getDisp() + ", milk";
+    }
 }

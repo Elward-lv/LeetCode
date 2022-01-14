@@ -6,5 +6,6 @@ public class Clinet {
         beverage = new Mocha(beverage);
         beverage = new Milk(beverage);
         System.out.println(beverage.cost());
+        System.out.println(beverage.getDisp());
     }
 }
