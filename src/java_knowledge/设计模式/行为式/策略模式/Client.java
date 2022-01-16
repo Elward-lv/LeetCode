@@ -11,5 +11,7 @@ public class Client {
 
         duck.setQuackBehavior(new Squeak());
         duck.performQuack();
+
+        duck.setFlyBehavior(new FlyWithRocket());
     }
 }
