@@ -1,7 +1,9 @@
-package java_knowledge.设计模式.创建式.简单工厂.review3;
+package java_knowledge.设计模式.创建式.pizza;
 
-import java_knowledge.设计模式.创建式.简单工厂.review3.pizza.Pizza;
-import java_knowledge.设计模式.创建式.简单工厂.review3.simple.SimpleNewYorkPizzaFactory;
+import java_knowledge.设计模式.创建式.pizza.ingredient.factory.ChinaIngredientFactory;
+import java_knowledge.设计模式.创建式.pizza.ingredient.factory.PizzaIngredientFactory;
+import java_knowledge.设计模式.创建式.pizza.pizza.Pizza;
+import java_knowledge.设计模式.创建式.pizza.simple.SimpleNewYorkPizzaFactory;
 
 /**
  * 披萨店：因为存在不同地区的披萨店所以抽象出createPizza方法
@@ -10,8 +12,10 @@ import java_knowledge.设计模式.创建式.简单工厂.review3.simple.SimpleN
  */
 public abstract class PizzaStore {
 
+    PizzaIngredientFactory ingredientFactory;
+
     public static void main(String[] args) {
-        PizzaStore pizzaStore = new NewYorkPizzaStore(new SimpleNewYorkPizzaFactory());
+        PizzaStore pizzaStore = new NewYorkPizzaStore(new SimpleNewYorkPizzaFactory(), new ChinaIngredientFactory());
         Pizza pizza = pizzaStore.orderPizza("NewYorkHotPizza");
         System.out.println(" eat pizza : " + pizza);
     }
