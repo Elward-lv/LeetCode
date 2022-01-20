@@ -31,6 +31,9 @@ public class Singleton {
 
 //        Singleton singleton = Singleton.getSingleton();
 //        System.out.println("主线程，实例名："+singleton);
+        /*线程名:Thread-1,实例名:java_knowledge.设计模式.创建式.单例模式.懒汉式.Singleton@59bd76b
+        线程名:Thread-2,实例名:java_knowledge.设计模式.创建式.单例模式.懒汉式.Singleton@3a8b1cc2
+        线程名:Thread-0,实例名:java_knowledge.设计模式.创建式.单例模式.懒汉式.Singleton@e103d29*/
     }
 
     static class MyThread extends Thread{
