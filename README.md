@@ -4,3 +4,6 @@
 
 项目参考[CSNOTE](https://github.com/CyC2018/CS-Notes)
 
+### 重新开启刷题流程
+数据结构 + 算法都需要考虑到
+folder: repeat2024
