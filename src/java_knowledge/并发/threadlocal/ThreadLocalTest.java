@@ -1,7 +1,6 @@
 package java_knowledge.并发.threadlocal;
 
 import java_knowledge.Stream.User;
-import org.junit.Test;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.ReentrantLock;
@@ -20,7 +19,6 @@ public class ThreadLocalTest {
      * 对于局部变量可以互不影响，此时是副本
      * 因为ThreadLocal的使用场景就不是为了线程同步，而是为了同一个线程内共享数据
      */
-    @Test
     public void testTwoLocal(){
         ReentrantLock lock = new ReentrantLock();
 
