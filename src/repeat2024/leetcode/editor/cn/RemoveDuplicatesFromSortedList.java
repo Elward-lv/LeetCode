@@ -81,7 +81,7 @@ class Solution {
             this.val = val;
         }
 
-        ListNode(int val, ReverseLinkedList.ListNode next) {
+        ListNode(int val, ListNode next) {
             this.val = val;
             this.next = next;
         }
